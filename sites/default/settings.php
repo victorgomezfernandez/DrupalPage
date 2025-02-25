@@ -325,7 +325,7 @@ $settings['update_free_access'] = FALSE;
  * @see \Drupal\update\UpdateFetcher
  * @see \Drupal\system\SecurityAdvisories\SecurityAdvisoriesFetcher
  */
-# $settings['update_fetch_with_http_fallback'] = TRUE;
+$settings['update_fetch_with_http_fallback'] = TRUE;
 
 /**
  * External access proxy settings:
@@ -762,7 +762,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  *
  * @see https://www.drupal.org/docs/installing-drupal/trusted-host-settings
  */
-# $settings['trusted_host_patterns'] = [];
+$settings['trusted_host_patterns'] = [
+  '^localhost$',
+  ];
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.
